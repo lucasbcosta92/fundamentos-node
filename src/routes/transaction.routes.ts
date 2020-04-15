@@ -22,11 +22,11 @@ transactionRouter.post('/', (request, response) => {
   try {
     const { title, value, type } = request.body;
 
-    // Definindo as regras de negócios de criação de um repositório no service
+    // Definindo as regras de negócios de criação de uma transação no service
     const createTransation = new CreateTransactionService(
       transactionsRepository,
     );
-    // executando o service - Validação e criação de um repositório
+    // executando o service - Validação e criação de uma transação
     const transaction = createTransation.execute({
       title,
       value,

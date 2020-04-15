@@ -22,7 +22,7 @@ class CreateTransactionService {
       throw Error('Insufficient cash balance');
     }
 
-    // chamando o repository que cria o appointment
+    // chamando o repository que cria a transação
     const transaction = this.transactionsRepository.create({
       title,
       value,
